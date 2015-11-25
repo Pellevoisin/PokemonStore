@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@model PokemonStore.Models.PokemonModel
+
+<h2>Landing Page</h2>
+
+    <div class="col-md-offset-2">
+        
+    </div>
+    <div class="col-md-6">
+        Welcome on Pokémon Store
+    </div>
+
+    <div class="col-md-4">
+        Choose a Pokémon you want to display statistics
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Dropdown
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+    </div>
+
+<table>
+    <tr>
+        <th>
+        </th>
+        <th>
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.ListPokemon) {
+        <tr>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Type
+            </td>
+        </tr>
+    }
+    </table>
+
+
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
